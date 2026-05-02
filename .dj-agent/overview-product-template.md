@@ -7,7 +7,7 @@
 
 ---
 
-## 1. 产品全景 (Product Landscape)
+## 1. 产品全景 (Product Landscape) 🔴必填
 
 ### 1.1 产品定位
 *描述本产品的定位及目标用户。*
@@ -39,7 +39,7 @@
 
 ---
 
-## 2. 功能需求 (Functional Requirements)
+## 2. 功能需求 (Functional Requirements) 🔴必填
 
 ### 2.1 功能清单
 *列出所有功能模块及其优先级。*
@@ -87,7 +87,7 @@
 
 ---
 
-## 3. 非功能需求 (Non-Functional Requirements)
+## 3. 非功能需求 (Non-Functional Requirements) 🟡按需
 
 ### 3.1 性能要求
 - **响应时间**: [例如: API响应 < 200ms]
@@ -116,7 +116,7 @@
 
 ---
 
-## 4. 数据设计 (Data Design)
+## 4. 数据设计 (Data Design) 🟡按需
 
 ### 4.1 核心数据模型
 *描述关键实体及其关系。*
@@ -145,7 +145,7 @@ Product (1) --> (N) OrderItem
 
 ---
 
-## 5. 用户体验设计 (UX Design)
+## 5. 用户体验设计 (UX Design) 🟡按需
 
 ### 5.1 信息架构
 *描述产品的信息组织结构。*
@@ -181,7 +181,7 @@ Product (1) --> (N) OrderItem
 
 ---
 
-## 6. 运营与监控 (Operations & Monitoring)
+## 6. 运营与监控 (Operations & Monitoring) ⚪选填
 
 ### 6.1 关键指标
 *定义需要监控的核心指标。*
@@ -207,7 +207,7 @@ Product (1) --> (N) OrderItem
 
 ---
 
-## 7. 版本规划 (Release Planning)
+## 7. 版本规划 (Release Planning) ⚪选填
 
 ### 7.1 版本路线图
 *规划产品迭代节奏。*
@@ -228,7 +228,7 @@ Product (1) --> (N) OrderItem
 
 ---
 
-## 8. 风险与约束 (Risks & Constraints)
+## 8. 风险与约束 (Risks & Constraints) 🟡按需
 
 ### 8.1 技术风险
 | 风险描述 | 影响程度 | 发生概率 | 应对措施 |
@@ -250,7 +250,7 @@ Product (1) --> (N) OrderItem
 
 ---
 
-## 9. 附录 (Appendix)
+## 9. 附录 (Appendix) ⚪选填
 
 ### 9.1 术语表
 *定义项目中使用的专业术语。*

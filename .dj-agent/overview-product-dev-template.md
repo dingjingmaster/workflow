@@ -8,7 +8,7 @@
 
 ---
 
-## 1. 项目概述 (Project Overview)
+## 1. 项目概述 (Project Overview) 🔴必填
 
 ### 1.1 项目背景
 *简述项目背景、业务目标和核心价值。*
@@ -30,7 +30,7 @@
 
 ---
 
-## 2. 技术选型 (Technology Stack)
+## 2. 技术选型 (Technology Stack) 🔴必填
 
 ### 2.1 核心技术栈
 *列出项目使用的核心技术及其选型理由。*
@@ -65,7 +65,7 @@
 
 ---
 
-## 3. 系统架构 (System Architecture)
+## 3. 系统架构 (System Architecture) 🔴必填
 
 ### 3.1 架构概览
 *描述系统整体架构设计。*
@@ -111,7 +111,7 @@ API层 → 业务逻辑层 → 数据访问层 → 数据库
 
 ---
 
-## 4. 详细设计 (Detailed Design)
+## 4. 详细设计 (Detailed Design) 🟡按需
 
 ### 4.1 核心模块设计
 *详细描述每个核心模块的设计。*
@@ -170,7 +170,7 @@ API层 → 业务逻辑层 → 数据访问层 → 数据库
 
 ---
 
-## 5. 数据库设计 (Database Design)
+## 5. 数据库设计 (Database Design) 🟡按需
 
 ### 5.1 数据库选型
 *说明数据库选型及理由。*
@@ -216,7 +216,7 @@ API层 → 业务逻辑层 → 数据访问层 → 数据库
 
 ---
 
-## 6. API设计 (API Design)
+## 6. API设计 (API Design) 🟡按需
 
 ### 6.1 API规范
 *定义API设计标准。*
@@ -291,7 +291,7 @@ API层 → 业务逻辑层 → 数据访问层 → 数据库
 
 ---
 
-## 7. 安全设计 (Security Design)
+## 7. 安全设计 (Security Design) ⚪选填
 
 ### 7.1 认证机制
 *描述用户认证方案。*
@@ -332,7 +332,7 @@ API层 → 业务逻辑层 → 数据访问层 → 数据库
 
 ---
 
-## 8. 开发规范 (Development Standards)
+## 8. 开发规范 (Development Standards) ⚪选填
 
 ### 8.1 代码规范
 *定义代码编写规范。*
@@ -405,7 +405,7 @@ project-root/
 
 ---
 
-## 9. 测试策略 (Testing Strategy)
+## 9. 测试策略 (Testing Strategy) 🟡按需
 
 ### 9.1 测试分层
 *定义测试分层和覆盖率要求。*
@@ -436,7 +436,7 @@ project-root/
 
 ---
 
-## 10. 部署方案 (Deployment)
+## 10. 部署方案 (Deployment) ⚪选填
 
 ### 10.1 环境规划
 *定义部署环境。*
@@ -506,7 +506,7 @@ project-root/
 
 ---
 
-## 11. 监控与日志 (Monitoring & Logging)
+## 11. 监控与日志 (Monitoring & Logging) ⚪选填
 
 ### 11.1 日志规范
 *定义日志记录标准。*
@@ -562,7 +562,7 @@ project-root/
 
 ---
 
-## 12. 性能优化 (Performance Optimization)
+## 12. 性能优化 (Performance Optimization) ⚪选填
 
 ### 12.1 缓存策略
 *描述缓存使用方案。*
@@ -591,7 +591,7 @@ project-root/
 
 ---
 
-## 13. 模块接口契约 (Module Contracts)
+## 13. 模块接口契约 (Module Contracts) 🟡按需
 
 ### 13.1 模块间通信
 *描述模块间通信方式。*
@@ -616,7 +616,7 @@ project-root/
 
 ---
 
-## 14. 风险与应对 (Risks & Mitigation)
+## 14. 风险与应对 (Risks & Mitigation) 🟡按需
 
 ### 14.1 技术风险
 | 风险描述 | 影响程度 | 发生概率 | 应对措施 |
@@ -638,7 +638,7 @@ project-root/
 
 ---
 
-## 15. 开发计划 (Development Plan)
+## 15. 开发计划 (Development Plan) 🟡按需
 
 ### 15.1 任务分解
 *将开发任务分解为可执行的子任务。*
@@ -667,7 +667,7 @@ project-root/
 
 ---
 
-## 16. 附录 (Appendix)
+## 16. 附录 (Appendix) ⚪选填
 
 ### 16.1 术语表
 *定义项目中使用的专业术语。*
