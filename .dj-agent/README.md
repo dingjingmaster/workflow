@@ -49,12 +49,20 @@
 
 ## 4. 模板选择
 
-- L0：不建文档，在最终回复中说明修改与验证即可。
-- L1：按需使用 `.dj-agent/summary-lite-template.md`，文件命名为 `docs/dev/[N]-summary-[slug].md`。
-- L2：需求实现默认使用 `.dj-agent/task-lite-template.md`，bug 修复优先使用 `.dj-agent/fix-lite-template.md`；文件命名为 `docs/dev/[N]-task-[slug].md` 或 `docs/dev/[N]-fix-[slug].md`。
-- L3/L4：使用完整模板 `.dj-agent/001-research-template.md`、`.dj-agent/002-plan-template.md`、`.dj-agent/003-summary-template.md`，同一需求使用同一 `N` 编号。
-- 代码提交说明：使用 `.dj-agent/commit-message-template.md`。
-- 总文档模板只记录长期稳定事实；单次任务细节写入 `docs/dev/[N]-*.md`，API/数据/部署/性能/并发/内核等详细设计按需使用 `.dj-agent/fragments/`。
+| 场景 | 模板 | 输出位置 |
+|------|------|----------|
+| L0 小改 | 不建文档 | 最终回复说明修改与验证 |
+| L1 轻量总结 | `.dj-agent/summary-lite-template.md` | `docs/dev/[N]-summary-[slug].md` |
+| 普通任务/功能 | `.dj-agent/task-lite-template.md` | `docs/dev/[N]-task-[slug].md` |
+| Bug/问题修复 | `.dj-agent/fix-lite-template.md` | `docs/dev/[N]-fix-[slug].md` |
+| L3/L4 完整流程 | `.dj-agent/001-research-template.md` + `.dj-agent/002-plan-template.md` + `.dj-agent/003-summary-template.md` | 同一 `N` 编号的多份文档 |
+| 总产品事实 | `.dj-agent/overview-product-template.md` | `docs/overview-product.md` |
+| 总开发事实 | `.dj-agent/overview-product-dev-template.md` | `docs/overview-product-dev.md` |
+| 详细设计片段 | `.dj-agent/fragments/` | 按需复制到任务文档或总文档 |
+| 代码提交说明 | `.dj-agent/commit-message-template.md` | commit message / 提交注释 |
+| 任务索引初始化 | `.dj-agent/dev-index-template.md` | `docs/dev/README.md` |
+
+总文档模板只记录长期稳定事实；单次任务细节写入 `docs/dev/[N]-*.md`，API/数据/部署/性能/并发/内核等详细设计按需使用 `.dj-agent/fragments/`。
 
 ## 5. 总文档更新规则
 
