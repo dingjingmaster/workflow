@@ -1,6 +1,9 @@
 # [需求名称] 轻量总结
 
 > 文档元数据
+> - 文件编号：N
+> - 文档类型：summary
+> - 文件路径：docs/dev/N-summary-[slug].md
 > - 完成日期：YYYY-MM-DD
 > - 需求级别：L1
 

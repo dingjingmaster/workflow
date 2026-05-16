@@ -1,6 +1,9 @@
 # [任务名称] 轻量任务记录
 
 > 文档元数据
+> - 文件编号：N
+> - 文档类型：task / fix
+> - 文件路径：docs/dev/N-task-[slug].md / docs/dev/N-fix-[slug].md
 > - 文档版本：v1.0.0
 > - 最后更新：YYYY-MM-DD
 > - 需求级别：L2

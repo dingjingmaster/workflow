@@ -35,10 +35,24 @@
 
 ## 3. 文档规范补充
 
-- 同一需求的文档统一使用同一 ID，存放在 `docs/dev/`。
-- L2 默认使用 `docs/dev/[ID]-task-[简述].md`。
-- L3/L4 使用 Research、Plan、Summary 三类文档。
+- 每次任务、问题修复或需求变更只要新增文档，必须分配文件编号。
+- 文件编号使用从 `1` 开始递增的正整数，全局只在 `docs/dev/` 下递增，不按类型分别编号，不要求固定位数。
+- 分配编号前必须同时检查 `docs/dev/README.md` 索引和 `docs/dev/` 现有文件名，取最大编号 + 1。
+- 编号一旦分配不得复用；任务取消、方案废弃或回退重开，也在索引中保留记录并标注状态。
+- 同一需求的多份文档统一使用同一编号，存放在 `docs/dev/`。
+- 文件命名格式：`docs/dev/[N]-[type]-[slug].md`。
+- `type` 取值：
+  - `task`：需求实现、普通任务、L2 单文件记录。
+  - `fix`：问题修复、缺陷定位与修复记录。
+  - `research`：L3/L4 调研文档。
+  - `plan`：L3/L4 计划文档。
+  - `summary`：L1+ 总结或 L3/L4 结论文档。
+- `slug` 使用短横线命名，优先英文小写；无法准确英文表达时使用简短拼音或中文短语，但必须稳定可读。
+- L1 如创建轻量 Summary，使用 `docs/dev/[N]-summary-[slug].md`。
+- L2 默认使用 `docs/dev/[N]-task-[slug].md`；若是 bug/problem 修复，优先使用 `docs/dev/[N]-fix-[slug].md`。
+- L3/L4 使用同一编号创建 Research、Plan、Summary 三类文档。
 - 索引由 `docs/dev/README.md` 维护。
+- 新增、取消、完成、拆分、合并文档时，必须同步更新 `docs/dev/README.md`。
 - 模板章节标注（必填/按需/选填）遵循“与需求无关则标注不适用”。
 
 ## 4. 回退记录模板（建议）

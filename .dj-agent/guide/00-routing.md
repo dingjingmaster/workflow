@@ -9,10 +9,10 @@
 | 级别 | 判断标准 | 流程 | 文档要求 |
 |------|---------|------|---------|
 | L0-快速 | 拼写、注释、单行配置、无行为变化的小修，且未命中安全门禁高风险项 | 直接修改 -> 最小验证 -> 回复说明 | 不建文档 |
-| L1-微小 | 改文案、修小 bug、调样式、局部低风险行为修正，且未命中安全门禁高风险项 | 直接编码 -> 验证 -> 简化 Summary | 可用轻量 Summary，必要时后补 |
-| L2-小型 | 单模块小功能，不影响现有架构 | 简化 Research + Plan + Code + Summary | 默认单文件轻量任务文档 |
-| L3-中型 | 跨模块功能，需要协调多个模块 | 完整流程 | Research / Plan / Summary 全部文档 |
-| L4-大型 | 新系统、架构变更、多团队协作 | 完整流程 + 额外评审 | 全部文档 + 专项评审记录 |
+| L1-微小 | 改文案、修小 bug、调样式、局部低风险行为修正，且未命中安全门禁高风险项 | 直接编码 -> 验证 -> 简化 Summary | 可用带编号轻量 Summary：`docs/dev/[N]-summary-[slug].md` |
+| L2-小型 | 单模块小功能，不影响现有架构 | 简化 Research + Plan + Code + Summary | 默认单文件带编号任务/问题文档：`docs/dev/[N]-task-[slug].md` 或 `docs/dev/[N]-fix-[slug].md` |
+| L3-中型 | 跨模块功能，需要协调多个模块 | 完整流程 | 同一编号的 Research / Plan / Summary 文档 |
+| L4-大型 | 新系统、架构变更、多团队协作 | 完整流程 + 额外评审 | 同一编号的全量文档 + 专项评审记录 |
 
 分级判断要点：
 - 拿到需求后先判断级别；语义不清先提问，影响范围不清先快速探查。
@@ -45,7 +45,8 @@
 - Summary 阶段：加载当前需求全部文档，回顾并沉淀结论。
 
 文档瘦身原则：
-- L2 默认只创建一个 `docs/dev/[ID]-task-[简述].md`，合并背景、方案、计划、验证和总结。
+- L1+ 只要新增任务/问题文档，必须按 `docs/dev/[N]-[type]-[slug].md` 编号命名，并更新 `docs/dev/README.md`。
+- L2 默认只创建一个 `docs/dev/[N]-task-[slug].md` 或 `docs/dev/[N]-fix-[slug].md`，合并背景、方案、计划、验证和总结。
 - 产品文档和开发文档按模块拆分章节，每个需求只更新相关章节。
 - Summary 文档作为压缩上下文，新需求优先加载 Summary。
 - 当单个文档超过 500 行时，按模块拆分为独立文件。
@@ -102,9 +103,9 @@
 - [ ] 检查是否命中 `05-safety-gates.md`
 - [ ] 按风险矩阵确认最终级别
 - [ ] 检查是否涉及 C2/C3 命令或 E0/E1 bug 证据
-- [ ] L2+ 分配 ID（检查 `docs/dev/` 最大序号 + 1）
-- [ ] L2：创建 `docs/dev/[ID]-task-[简述].md`
-- [ ] L3/L4：创建 Research、Plan、Summary 文档
+- [ ] L1+ 如需新增文档，分配从 `1` 开始递增的编号（检查 `docs/dev/README.md` 和 `docs/dev/` 文件名最大序号 + 1）
+- [ ] L2：创建 `docs/dev/[N]-task-[slug].md` 或 `docs/dev/[N]-fix-[slug].md`
+- [ ] L3/L4：使用同一 `N` 创建 Research、Plan、Summary 文档
 - [ ] 编码完成，验证通过
 - [ ] 按需更新 `docs/overview-product.md` 与 `docs/overview-product-dev.md`
-- [ ] L2+ 更新 `docs/dev/README.md` 索引
+- [ ] L1+ 如新增文档，更新 `docs/dev/README.md` 索引
