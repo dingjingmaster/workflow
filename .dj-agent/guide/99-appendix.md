@@ -49,7 +49,7 @@
   - `summary`：L1+ 总结或 L3/L4 结论文档。
 - `slug` 使用短横线命名，优先英文小写；无法准确英文表达时使用简短拼音或中文短语，但必须稳定可读。
 - L1 如创建轻量 Summary，使用 `docs/dev/[N]-summary-[slug].md`。
-- L2 默认使用 `docs/dev/[N]-task-[slug].md`；若是 bug/problem 修复，优先使用 `docs/dev/[N]-fix-[slug].md`。
+- L2 默认使用 `docs/dev/[N]-task-[slug].md`；若是 bug/problem 修复，优先使用 `docs/dev/[N]-fix-[slug].md` 和 `.dj-agent/fix-lite-template.md`。
 - L3/L4 使用同一编号创建 Research、Plan、Summary 三类文档。
 - 索引由 `docs/dev/README.md` 维护。
 - 新增、取消、完成、拆分、合并文档时，必须同步更新 `docs/dev/README.md`。

@@ -45,19 +45,22 @@
 - 开发设计文档：`docs/overview-product-dev.md`
 - 需求文档索引：`docs/dev/README.md`
 - 模板目录：`.dj-agent/`
+- 详细设计片段：`.dj-agent/fragments/`
 
 ## 4. 模板选择
 
 - L0：不建文档，在最终回复中说明修改与验证即可。
 - L1：按需使用 `.dj-agent/summary-lite-template.md`，文件命名为 `docs/dev/[N]-summary-[slug].md`。
-- L2：默认使用 `.dj-agent/task-lite-template.md`，将 Research、Plan、Summary 合并成单文件；文件命名为 `docs/dev/[N]-task-[slug].md` 或 `docs/dev/[N]-fix-[slug].md`。
+- L2：需求实现默认使用 `.dj-agent/task-lite-template.md`，bug 修复优先使用 `.dj-agent/fix-lite-template.md`；文件命名为 `docs/dev/[N]-task-[slug].md` 或 `docs/dev/[N]-fix-[slug].md`。
 - L3/L4：使用完整模板 `.dj-agent/001-research-template.md`、`.dj-agent/002-plan-template.md`、`.dj-agent/003-summary-template.md`，同一需求使用同一 `N` 编号。
 - 代码提交说明：使用 `.dj-agent/commit-message-template.md`。
+- 总文档模板只记录长期稳定事实；单次任务细节写入 `docs/dev/[N]-*.md`，API/数据/部署/性能/并发/内核等详细设计按需使用 `.dj-agent/fragments/`。
 
 ## 5. 总文档更新规则
 
 - 影响长期产品行为、用户流程或功能边界时，更新 `docs/overview-product.md`。
 - 影响架构、公共接口、数据模型、依赖、部署或验证方式时，更新 `docs/overview-product-dev.md`。
+- 总文档只沉淀长期稳定事实，不记录单次实现过程、临时排查、阶段性计划或可从任务文档追溯的细节。
 - 仅实现细节变化时，不强制更新总文档；在任务 Summary 中记录即可。
 - L1+ 只要新增任务/问题文档，就必须分配从 `1` 开始递增的文件编号并更新 `docs/dev/README.md` 索引。
 
