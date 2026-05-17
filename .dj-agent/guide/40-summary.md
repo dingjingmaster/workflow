@@ -20,6 +20,8 @@
 - L2 将 Summary 写入对应 `docs/dev/[ID]-task-[简述].md` 或 `docs/dev/[ID]-fix-[简述].md`。
 - L3/L4 产出 Summary 文档（参考 `.dj-agent/003-summary-template.md`）。
 - 新增 `docs/dev/` 文档，或文档状态/摘要变化时，同步更新 `docs/dev/README.md` 索引。
+- 提交前必须完成当前任务文档进度更新：执行计划最终状态、验证结果、计划偏差、未解决风险。
+- 验证与文档更新完成后，按 `.dj-agent/commit-message-template.md` 提交本次相关变更；如因门禁或环境限制未提交，Summary 和最终回复都必须写明原因。
 - 按需更新总文档并添加关联链接：
   - `docs/overview-product.md`
   - `docs/overview-product-dev.md`
@@ -30,6 +32,7 @@
 - 当前级别要求多角色审视时，审视已通过。
 - 涉及 `docs/dev/` 文档时，索引更新完成，链接可追溯。
 - 总文档在确有长期产品或架构影响时已更新。
+- 本次相关变更已提交，或已记录未提交原因。
 
 ## 4. 约束
 
