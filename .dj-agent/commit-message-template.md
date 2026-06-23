@@ -24,7 +24,7 @@
 - 风险应对/验证：
 
 5. 文档/进度更新
-- 更新的任务文档：
+- 本地任务文档：
 - 执行计划状态：
 - 索引/总文档更新：
 ```
@@ -53,7 +53,7 @@
 - 风险应对/验证：go test ./internal/gateway
 
 5. 文档/进度更新
-- 更新的任务文档：docs/dev/12-fix-gateway-start-state.md
+- 本地任务文档：docs/dev/12-fix-gateway-start-state.md（未纳入提交）
 - 执行计划状态：全部完成
 - 索引/总文档更新：docs/dev/README.md
 ```

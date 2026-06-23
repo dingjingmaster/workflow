@@ -21,8 +21,8 @@
 
 ## 3. 文档规则
 
-- L2：需求实现写入 `docs/dev/[ID]-task-[简述].md` 的“背景与边界”和“方案”部分；bug 修复写入 `docs/dev/[ID]-fix-[简述].md` 的“问题定义”“证据与根因”和“修复方案”部分。
-- L3/L4：创建独立 `docs/dev/[ID]-research-[简述].md`。
+- L2：需求实现写入本地 `docs/dev/[ID]-task-[简述].md` 的“背景与边界”和“方案”部分；bug 修复写入本地 `docs/dev/[ID]-fix-[简述].md` 的“问题定义”“证据与根因”和“修复方案”部分。
+- L3/L4：创建本地独立 `docs/dev/[ID]-research-[简述].md`。
 - 只有影响长期产品行为、用户流程或功能边界时，才更新 `docs/overview-product.md`。
 - 如果产品文档不存在，先按 `.dj-agent/overview-product-template.md` 创建骨架，再只补相关章节。
 

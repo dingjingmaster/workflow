@@ -23,8 +23,8 @@
 
 ## 3. 文档规则
 
-- L2：需求实现写入 `docs/dev/[ID]-task-[简述].md` 的“执行计划”；bug 修复写入 `docs/dev/[ID]-fix-[简述].md` 的“修复执行计划”。验证方式写入计划表，验证结果在 Summary/验证记录阶段补充。
-- L3/L4：创建独立 `docs/dev/[ID]-plan-[简述].md`。
+- L2：需求实现写入本地 `docs/dev/[ID]-task-[简述].md` 的“执行计划”；bug 修复写入本地 `docs/dev/[ID]-fix-[简述].md` 的“修复执行计划”。验证方式写入计划表，验证结果在 Summary/验证记录阶段补充。
+- L3/L4：创建本地独立 `docs/dev/[ID]-plan-[简述].md`。
 - 只有影响架构、公共接口、数据模型、依赖、部署、长期通用验证方式、项目级验证入口或发布验证标准时，才需要更新 `docs/overview-product-dev.md`；事实稳定且确需立即沉淀时可在本阶段更新，否则在 Summary 阶段更新。
 - 如果开发文档不存在，先按 `.dj-agent/overview-product-dev-template.md` 创建骨架，再只补相关章节。
 
