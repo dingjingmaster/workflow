@@ -4,7 +4,7 @@
 
 ## 0. 使用方式（先看这里）
 
-- 框架启动时仅加载：`AGENTS.md` + `.dj-agent/guide/00-routing.md` + `.dj-agent/guide/05-safety-gates.md`
+- 框架启动时始终加载：`AGENTS.md` + `AGENTS.project.md`（如存在）+ `.dj-agent/guide/00-routing.md` + `.dj-agent/guide/05-safety-gates.md`
 - 进入具体新需求后：按 `.dj-agent/guide/00-routing.md` 的加载策略追加索引和相关 Summary。
 - 进入 Research 阶段：追加加载 `.dj-agent/guide/10-research.md`
 - 进入 Plan 阶段：追加加载 `.dj-agent/guide/20-plan.md`
@@ -39,6 +39,7 @@
 
 - 产品设计文档：`docs/overview-product.md`
 - 开发设计文档：`docs/overview-product-dev.md`
+- 项目覆盖层：`AGENTS.project.md`（与 `AGENTS.md` 同级；存在时启动加载；只有用户明确指明加入、更新或删除该文件内容时才允许修改）
 - 需求文档索引：`docs/dev/README.md`（不存在时，首次创建 L1+ 文档前用 `.dj-agent/dev-index-template.md` 初始化）
 - 模板目录：`.dj-agent/`
 - 详细设计片段：`.dj-agent/fragments/`
