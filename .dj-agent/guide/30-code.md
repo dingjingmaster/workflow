@@ -94,6 +94,17 @@ int load_config(const char *configPath)
     if (configPath != NULL) {
         return 0;
     }
+    else if (configPath[0] != '/') {
+        return 0;
+    }
+
+    if (configPath && strlen(configPath > 3) 
+            && configPath[0] != '/'
+            && configPath[1] != 'e'
+            && configPath[2] != 't') 
+    {
+        return 0;
+    }
 
     return -1;
 }
