@@ -18,4 +18,5 @@
 
 | 日期 | 级别 | 模块 | 类型 | 关联文档 | 状态 | 摘要 |
 |------|------|------|------|----------|------|------|
-| YYYY-MM-DD | L2 | [module] | task/fix/module/research/plan/summary/review | [modules/module.md](modules/module.md) | 已完成 | [摘要] |
+| 2026-06-23 | L2 | project-overlay | task | [1-task-project-overlay-template.md](1-task-project-overlay-template.md) | 已完成 | 将项目特有配置和安全边界抽成持久覆盖模板，存在时自动加载且默认只读，只有用户明确指明时才允许修改。 |
+| 2026-07-02 | L2 | workflow-documentation | module | [modules/workflow-documentation.md](modules/workflow-documentation.md) | 已完成 | 将 L1/L2 默认文档落点从每次新建独立任务文档改为模块文档 + 索引，独立文档只用于复杂场景。 |

@@ -21,7 +21,8 @@
 
 ## 3. 文档规则
 
-- L2：需求实现写入本地 `docs/dev/[ID]-task-[简述].md` 的“背景与边界”和“方案”部分；bug 修复写入本地 `docs/dev/[ID]-fix-[简述].md` 的“问题定义”“证据与根因”和“修复方案”部分。
+- L1/L2：默认不新建独立 Research 文档；需求背景、方案边界、bug 现象、证据等级和根因结论优先写入相关 `docs/dev/modules/[module].md`，并在 `docs/dev/README.md` 追加索引行。
+- L2 只有在复杂 bug 需要完整证据链、方案取舍需要复盘、没有合适模块文档或用户明确要求时，才创建 `docs/dev/[ID]-task-[简述].md` 或 `docs/dev/[ID]-fix-[简述].md`，并写入对应的背景、证据、根因和方案章节。
 - L3/L4：创建本地独立 `docs/dev/[ID]-research-[简述].md`。
 - 只有影响长期产品行为、用户流程或功能边界时，才更新 `docs/overview-product.md`。
 - 如果产品文档不存在，先按 `.dj-agent/overview-product-template.md` 创建骨架，再只补相关章节。

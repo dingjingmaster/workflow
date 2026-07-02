@@ -5,7 +5,7 @@
 ## 0. 使用方式（先看这里）
 
 - 框架启动时始终加载：`AGENTS.md` + `AGENTS.project.md`（如存在）+ `.dj-agent/guide/00-routing.md` + `.dj-agent/guide/05-safety-gates.md`
-- 进入具体新需求后：按 `.dj-agent/guide/00-routing.md` 的加载策略追加索引和相关 Summary。
+- 进入具体新需求后：按 `.dj-agent/guide/00-routing.md` 的加载策略追加索引、相关模块文档和必要的 Summary。
 - 进入 Research 阶段：追加加载 `.dj-agent/guide/10-research.md`
 - 进入 Plan 阶段：追加加载 `.dj-agent/guide/20-plan.md`
 - 进入 Code 阶段：追加加载 `.dj-agent/guide/30-code.md` + `.dj-agent/guide/60-validation.md`
@@ -40,7 +40,8 @@
 - 产品设计文档：`docs/overview-product.md`
 - 开发设计文档：`docs/overview-product-dev.md`
 - 项目覆盖层：`AGENTS.project.md`（与 `AGENTS.md` 同级；存在时启动加载；只有用户明确指明加入、更新或删除该文件内容时才允许修改）
-- 需求文档索引：`docs/dev/README.md`（本地上下文索引；不存在时，首次创建 L1+ 文档前用 `.dj-agent/dev-index-template.md` 初始化）
+- 任务与模块变更索引：`docs/dev/README.md`（本地上下文索引；不存在时，首次需要记录 L1+ 变更前用 `.dj-agent/dev-index-template.md` 初始化）
+- 模块文档目录：`docs/dev/modules/`（功能开发和 bug 修复默认更新对应模块文档，而不是每次新建任务文档）
 - 模板目录：`.dj-agent/`
 - 详细设计片段：`.dj-agent/fragments/`
 
@@ -49,18 +50,19 @@
 | 场景 | 模板 | 输出位置 |
 |------|------|----------|
 | L0 小改 | 不建文档 | 最终回复说明修改与验证 |
-| L1 轻量总结 | `.dj-agent/summary-lite-template.md` | `docs/dev/[N]-summary-[slug].md` |
-| 普通任务/功能（L2） | `.dj-agent/task-lite-template.md` | `docs/dev/[N]-task-[slug].md` |
-| Bug/问题修复（L2） | `.dj-agent/fix-lite-template.md` | `docs/dev/[N]-fix-[slug].md` |
+| L1 轻量总结 | 默认不建独立文档；确需独立记录时用 `.dj-agent/summary-lite-template.md` | 最终回复、`docs/dev/README.md` 或 `docs/dev/modules/[module].md` |
+| 普通任务/功能（L2） | 默认更新模块文档和索引；复杂任务按需用 `.dj-agent/task-lite-template.md` | `docs/dev/modules/[module].md` + `docs/dev/README.md`；按需 `docs/dev/[N]-task-[slug].md` |
+| Bug/问题修复（L2） | 默认更新模块文档和索引；复杂问题按需用 `.dj-agent/fix-lite-template.md` | `docs/dev/modules/[module].md` + `docs/dev/README.md`；按需 `docs/dev/[N]-fix-[slug].md` |
 | L3/L4 完整流程（含复杂 bug 修复） | `.dj-agent/001-research-template.md` + `.dj-agent/002-plan-template.md` + `.dj-agent/003-summary-template.md` | 同一 `N` 编号的多份文档 |
 | L4 专项评审 | 无固定模板，按评审结论记录 | `docs/dev/[N]-review-[slug].md` |
 | 总产品事实 | `.dj-agent/overview-product-template.md` | `docs/overview-product.md` |
 | 总开发事实 | `.dj-agent/overview-product-dev-template.md` | `docs/overview-product-dev.md` |
+| 模块文档 | `.dj-agent/module-doc-template.md` | `docs/dev/modules/[module].md` |
 | 详细设计片段 | `.dj-agent/fragments/` | 按需复制到任务文档或总文档 |
 | 代码提交说明 | `.dj-agent/commit-message-template.md` | commit message / 提交注释 |
 | 任务索引初始化 | `.dj-agent/dev-index-template.md` | `docs/dev/README.md` |
 
-总文档模板只记录长期稳定事实；单次任务细节写入本地上下文 `docs/dev/[N]-*.md`，默认不要求提交；API/数据/部署/性能/并发/内核等详细设计按需使用 `.dj-agent/fragments/`。
+总文档模板只记录长期稳定事实；`docs/dev/README.md` 记录变更索引，`docs/dev/modules/` 按模块沉淀可复用上下文，独立 `docs/dev/[N]-*.md` 只用于复杂任务、复杂 bug、专项评审或需要完整 Research/Plan/Summary 的场景；API/数据/部署/性能/并发/内核等详细设计按需使用 `.dj-agent/fragments/`。
 
 Todo list 规则：不新增独立 todo list 模板；执行清单边界见 `.dj-agent/guide/20-plan.md`。
 
@@ -68,9 +70,9 @@ Todo list 规则：不新增独立 todo list 模板；执行清单边界见 `.dj
 
 - 影响长期产品行为、用户流程或功能边界时，更新 `docs/overview-product.md`。
 - 影响架构、公共接口、数据模型、依赖、部署、长期通用验证方式、项目级验证入口或发布验证标准时，更新 `docs/overview-product-dev.md`。
-- 总文档只沉淀长期稳定事实，不记录单次实现过程、临时排查、阶段性计划或可从任务文档追溯的细节。
-- 仅实现细节变化时，不强制更新总文档；在任务 Summary 中记录即可。
-- L1+ 只要新增任务、问题、调研、计划、总结或评审文档，就必须分配从 `1` 开始递增的文件编号并更新本地 `docs/dev/README.md` 索引；`docs/dev` 默认不纳入提交范围，最终回复说明本地上下文更新结果。
+- 总文档只沉淀长期稳定事实，不记录单次实现过程、临时排查、阶段性计划或可从模块文档/任务索引追溯的细节。
+- 仅实现细节变化时，不强制更新总文档；按需更新模块文档和 `docs/dev/README.md` 索引。
+- L1+ 需要记录本地上下文时，优先更新 `docs/dev/README.md` 索引和 `docs/dev/modules/[module].md`；只有新增独立任务、问题、调研、计划、总结或评审文档时，才分配从 `1` 开始递增的文件编号。
 
 ## 6. 维护规则
 
